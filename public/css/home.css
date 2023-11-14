@@ -1,364 +1,22 @@
-:root{
-    --trans: .3s ease-in-out;
-}
 *{
+    padding:0;
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family:'Raleway', sans-serif;
     overflow-x: hidden;
-    text-decoration: none;
-    list-style: none;
+}
+.header{
+    height: 90vh;
+    background-image: url('/img/spacey.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-/* header */
-
-header{
-    width: 100vw;
-    height: 100vh;
-    margin: auto;
-    background:url("/img/spacey.jpg")no-repeat center/cover;
-    overflow-y: hidden;
-}
-
-/* nav */
-
-
-header nav a h3{
-    letter-spacing: -3px;
-    font-size: 3rem;
-    font-weight: 1000;
-    color: #fff;
-    padding: 2px;
-    opacity: 0.7;
-}
-header nav a h3:hover{
-    opacity: 1;
-    transition: var(--trans);
-}
-header span{
-    color: #fff;
-}
-header nav{
-    width: 100%;
-    height: 10%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 2%;
-}
-header nav ul{
-    list-style: none;
-    display: flex;
-    margin-right: 3%;
-}
-header nav ul li{
-    padding:4px 20px;
-}
-header nav ul li a{
-    
-    color: #fff;
-    font-size: 1rem;
-    transition: .3s linear;
-    position: relative;
-    padding: 4px;
-    font-weight:800;
-}
-header nav ul li a::before{
-    content:"";
-    position: absolute;
-    width: 0;
-    height: 0.2rem;
-    top: 0;
-    left: 0;    
-    margin-top: 25px;
-    background-color: #fff;
-    transition: var(--trans);
-}
-header nav ul li a:hover::before{
-    width: 100%;
-}
-header nav ul li:nth-last-child(2) a{
-    color: #000;
-}
-header nav ul li:nth-last-child(2){
-    background-color: #fff;
-    border-radius: 1.3rem;
-    padding:7px 1rem;
-    font-weight: 600;
-}
-header nav ul li:nth-last-child(2):hover a{
-    color:#fff ;
-}
-header nav ul li:nth-last-child(2):hover{
-    background-color:#000 ;
-    cursor: pointer;
-    transition: var(--trans);
-}
-header nav span{
-    overflow-y: hidden;
-}
-.side-bar{
-    position: absolute;
-    background-color: #000;
-    top: 0;
-    left: -200vw;
-    width: 30vw;
-    height: 70vh;
-    border: 2px solid #fff;
-    transition: var(--trans);
-    z-index: 1;
-}
-.side-bar-link{
-    text-align: center;
-    padding: 0.7rem 1rem;
-    margin: 0.1rem;
-    border: 2px solid #fff;
-    width: 20vw;
-}
-.side-bar ul{
-    display: flex;
-    flex-direction: column;
-}
-.side-bar-link a{
-    color: #fff;
-    font-weight: 600;
-}
-.close{
-    position: absolute;
-    left: 26.5vw;
-    top: 1vh;
-    font-weight: 1000;
-    color: #fff;
-    border: 2px solid #fff;
-}
-.menu{
-    display: none;
-}
-.side-bar-link-none{
-    display: none;
-}
-
-/* content-header */
-
-header .cont-header{
-    width: 100%;
-    height: 45%;
-    cursor: default;
-    top: 0;
-}
-header .cont-header-box{
-    width: 50%;
-    height: auto;
-    margin-left: 40%;
-    text-align: end;
-}
-header .cont-header-box-text{
-    letter-spacing: 1px;
-    margin-left: 50%;
-    width: 50%;
-}
-header .cont-header h1{
-    font-size: 2.7rem;
-    animation: bounce-in-top 1.5s both;
-    color: #fff;
-    margin-top:2rem;
-}
-header .cont-header h1::first-letter{
-    font-size: 5rem;
-    font-weight: 1000;
-}
-header .cont-header p{
-    font-size: 0.9rem;
-    color: #fff;
-    font-weight: 600;
-    animation: bounce-in-top 1.5s both;
-}
-@keyframes bounce-in-top{
-    0%{
-        transform: translateY(-500px);
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }
-    38%{
-        transform: translateY(0);
-        animation-timing-function: ease-out;
-        opacity: 1;
-    }
-    55%{
-        transform: translateY(-65px);
-        animation-timing-function: ease-in;
-    }
-    72%{
-        transform: translateY(0);
-        animation-timing-function: ease-out;
-    }
-    81%{
-        transform: translateY(-28px);
-        animation-timing-function: ease-in;
-    }
-    90%{
-        transform: translateY(0);
-        animation-timing-function: ease-out;
-    }
-    95%{
-        transform: translateY(-8px);
-        animation-timing-function: ease-in;
-    }
-    100%{
-        transform: translateY(0);
-        animation-timing-function: ease-out;
-    }
-}
-.cont-header-desconto{
-    width: 30%;
-    position: absolute;
-    top: 550px;
-    left: 30px;
-    color: #fff;
-    letter-spacing:-1px;
-    cursor: default;
-}
-.cont-header-desconto button a{
-    color: #fff;
-}
-.cont-header-desconto button{
-    padding: 1rem 2rem;
-    margin: 1rem;
-    border: 3px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    font-weight: 800;
-    cursor: pointer;
-}
-.cont-header-desconto button:hover{
-    background-color: #fff;
-    color: #000;
-    transition: var(--trans);
-    border: 3px solid #000;
-}
-.cont-header-desconto button:hover a{
-    color: #000;
-    transition: var(--trans);
-}
-
-/* main */
-
-.criacao-desconto, .lua-desconto, .saturno-desconto, .netuno-desconto, .marte-desconto, .centauri-desconto, .andromeda-desconto{
-    overflow-y: hidden;
-}
-
-/*  andromeda  */
-.andromeda{
-    width: 100vw;
-    height: 110vh;
-    margin: auto;
-    background:url("/assets/img/andromeda.jpg")no-repeat center/cover;
-    overflow-y: hidden;
-    display: flex;
-}
-.andromeda-desconto{
-    width: 45vw;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.andromeda-desconto-info-basica h2{
-    color: #fff;
-    margin: 1rem;
-}
-.andromeda-desconto-info-basica{
-    margin: 15vh 0.1rem 15vh 1rem;
-}
-.andromeda-desconto-cont{
-    height: 40vh;
-    margin-top:10vh ;
-    padding-top: 10vh;
-}
-.andromeda-desconto-cont h2{
-    color: #fff;
-    margin:2rem;
-}
-.andromeda-desconto-cont a{
-    color: #fff;
-    margin:1rem;
-    
-}
-.andromeda-desconto-cont button:hover a{
-    color: #000;
-    transition: var(--trans);
-}
-.andromeda-desconto-cont button{
-    padding: 1rem 2rem;
-    width: 100%;
-    border: 3px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    font-weight: 800;
-    cursor: pointer;
-}
-.andromeda-desconto-cont button:hover{
-    background-color: #fff;
-    transition: var(--trans);
-    border: 3px solid #000;
-}
-/*  centauri-b  */
-.centauri{
-    width: 100vw;
-    height: 110vh;
-    margin: auto;
-    background:url("/assets/img/centauri-b.jpg")no-repeat center/cover;
-    overflow-y: hidden;
-    display: flex;
-}
-.centauri-desconto{
-    width: 45vw;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.centauri-desconto-info-basica h2{
-    color: #fff;
-    margin: 1rem;
-}
-.centauri-desconto-info-basica{
-    margin: 15vh 0.1rem 15vh 1rem;
-}
-.centauri-desconto-cont{
-    height: 40vh;
-    margin-top:10vh ;
-    padding-top: 10vh;
-}
-.centauri-desconto-cont h2{
-    color: #fff;
-    margin:2rem;
-}
-.centauri-desconto-cont a{
-    color: #fff;
-    margin:1rem;
-    
-}
-.centauri-desconto-cont button:hover a{
-    color: #000;
-    transition: var(--trans);
-}
-.centauri-desconto-cont button{
-    padding: 1rem 2rem;
-    width: 100%;
-    border: 3px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    font-weight: 800;
-    cursor: pointer;
-}
-.centauri-desconto-cont button:hover{
-    background-color: #fff;
-    transition: var(--trans);
-    border: 3px solid #000;
-}
 /*  marte  */
 .marte{
     width: 100vw;
-    height: 110vh;
+    height: 80vh;
     margin: auto;
-    background:url("/assets/img/marte2.jpg")no-repeat center/cover;
+    background:url("/img/marte2.jpg")no-repeat center/cover;
     overflow-y: hidden;
     display: flex;
 }
@@ -369,14 +27,6 @@ header .cont-header p{
 .marte-desconto-info-basica h2{
     color: #fff;
     margin: 1rem;
-}
-.marte-desconto-info-basica{
-    margin: 15vh 0.1rem 15vh 1rem;
-}
-.marte-desconto-cont{
-    height: 40vh;
-    margin-top:10vh ;
-    padding-top: 10vh;
 }
 .marte-desconto-cont h2{
     color: #fff;
@@ -405,116 +55,13 @@ header .cont-header p{
     transition: var(--trans);
     border: 3px solid #000;
 }
-/*  netuno  */
-.netuno{
-    width: 100vw;
-    height: 110vh;
-    margin: auto;
-    background:url("/assets/img/netuno.jpg")no-repeat center/cover;
-    overflow-y: hidden;
-    display: flex;
-}
-.netuno-desconto{
-    width: 45vw;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.netuno-desconto-info-basica h2{
-    color: #fff;
-    margin: 1rem;
-}
-.netuno-desconto-info-basica{
-    margin: 12vh 0.1rem 12vh 1rem;
-}
-.netuno-desconto-cont{
-    height: 40vh;
-    margin-top:10vh ;
-    padding-top: 10vh;
-}
-.netuno-desconto-cont h2{
-    color: #fff;
-    margin:2rem;
-}
-.netuno-desconto-cont a{
-    color: #fff;
-    margin:1rem;
-    
-}
-.netuno-desconto-cont button:hover a{
-    color: #000;
-    transition: var(--trans);
-}
-.netuno-desconto-cont button{
-    padding: 1rem 2rem;
-    width: 100%;
-    border: 3px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    font-weight: 800;
-    cursor: pointer;
-}
-.netuno-desconto-cont button:hover{
-    background-color: #fff;
-    transition: var(--trans);
-    border: 3px solid #000;
-}
-/*  saturno  */
-.saturno{
-    width: 100vw;
-    height: 110vh;
-    margin: auto;
-    background:url("/assets/img/saturno.png")no-repeat center/cover;
-    overflow-y: hidden;
-    display: flex;
-}
-.saturno-desconto{
-    width: 45vw;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.saturno-desconto-info-basica h2{
-    color: #fff;
-    margin: 1rem;
-}
-.saturno-desconto-info-basica{
-    margin: 15vh 0.1rem 15vh 1rem;
-}
-.saturno-desconto-cont{
-    height: 40vh;
-    margin-top:10vh ;
-    padding-top: 10vh;
-}
-.saturno-desconto-cont h2{
-    color: #fff;
-    margin:2rem;
-}
-.saturno-desconto-cont a{
-    color: #fff;
-    margin:1rem;
-    
-}
-.saturno-desconto-cont button:hover a{
-    color: #000;
-    transition: var(--trans);
-}
-.saturno-desconto-cont button{
-    padding: 1rem 2rem;
-    width: 100%;
-    border: 3px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    font-weight: 800;
-    cursor: pointer;
-}
-.saturno-desconto-cont button:hover{
-    background-color: #fff;
-    transition: var(--trans);
-    border: 3px solid #000;
-}
+
 /*  lua  */
 .lua{
     width: 100vw;
-    height: 110vh;
+    height: 80vh;
     margin: auto;
-    background:url("/assets/img/lua.jpg")no-repeat center/cover;
+    background:url("/img/lua.jpg")no-repeat center/cover;
     overflow-y: hidden;
     display: flex;
 }
@@ -525,14 +72,6 @@ header .cont-header p{
 .lua-desconto-info-basica h2{
     color: #fff;
     margin: 1rem;
-}
-.lua-desconto-info-basica{
-    margin: 15vh 0.1rem 15vh 1rem;
-}
-.lua-desconto-cont{
-    height: 40vh;
-    margin-top:10vh ;
-    padding-top: 11vh;
 }
 .lua-desconto-cont h2{
     color: #fff;
@@ -562,59 +101,6 @@ header .cont-header p{
     border: 3px solid #000;
 }
 
-/*  criacao  */
-.criacao{
-    width: 100vw;
-    height: 110vh;
-    margin: auto;
-    background:url("/assets/img/criacao2.jpg")no-repeat center/cover;
-    overflow-y: hidden;
-    display: flex;
-}
-.criacao-desconto{
-    width: 45vw;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.criacao-desconto-info-basica h2{
-    color: #fff;
-    margin: 1rem;
-}
-.criacao-desconto-info-basica{
-    margin: 15vh 0.1rem 15vh 1rem;
-}
-.criacao-desconto-cont{
-    height: 40vh;
-    margin-top:10vh ;
-    padding-top: 10vh;
-}
-.criacao-desconto-cont h2{
-    color: #fff;
-    margin:1rem;
-}
-.criacao-desconto-cont a{
-    color: #fff;
-    margin:1rem;
-    
-}
-.criacao-desconto-cont button:hover a{
-    color: #000;
-    transition: var(--trans);
-}
-.criacao-desconto-cont button{
-    padding: 1rem 2rem;
-    width: 100%;
-    border: 3px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    font-weight: 800;
-    cursor: pointer;
-}
-.criacao-desconto-cont button:hover{
-    background-color: #fff;
-    transition: var(--trans);
-    border: 3px solid #000;
-}
-
 /* footer */
 
 footer{
@@ -625,6 +111,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #000;
 }
 footer h2{
     text-align: center;
