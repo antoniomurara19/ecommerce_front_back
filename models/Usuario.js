@@ -25,28 +25,7 @@ const Usuario = db.define('usuario',{
     },
     tipo:{
         type: DataTypes.STRING(30) // cliente e admin
-    },
-    // rua: {
-    //     type: DataTypes.STRING(50)
-    // },
-    // numero: {
-    //     type: DataTypes.INTEGER
-    // },
-    // bairro: {
-    //     type: DataTypes.STRING(50)
-    // },
-    // complemento: {
-    //     type: DataTypes.STRING(50)
-    // },
-    // cep:{
-    //     type: DataTypes.STRING(12)
-    // },
-    // cidade:{
-    //     type: DataTypes.STRING(50)
-    // },
-    // estado: {
-    //     type: DataTypes.STRING(50)
-    // }
+    }
 },{
     createdAt: false,
     updatedAt: false

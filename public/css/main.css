@@ -38,6 +38,7 @@ h1{
     width: 4rem;
     height: 4rem;
 }
-#carrinho-icon{
+.carrinho{
     color: #fff;
+    overflow-y: hidden;
 }

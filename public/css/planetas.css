@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container-1,.container-2{
+    width: 100vw;
+    height: 50vh;
+    border: 3px solid #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow-y: hidden;
+}
+.andromeda, .centauri, .pilar, .marte, .saturno, .lua{
+    border: 3px solid #000;
+    width: 30vw;
+    height: 50vh;
+}

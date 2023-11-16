@@ -65,11 +65,17 @@ app.get('/planetas',(req,res)=>{
     res.render('planetas',{log, user, tipo_user})
 })
 app.get('/logout',(req,res)=>{
-    let log = false
+    log = false
     res.render('home',{log, user, tipo_user})
 })
 app.get('/excluir_viagem',(req,res)=>{
     res.render('excluir_viagem',{log, user, tipo_user})
+})
+app.get('/gerenciador',(req,res)=>{
+    res.render('gerenciador',{log, user, tipo_user})
+})
+app.get('/carrinho',(req,res)=>{
+    res.render('carrinho',{log, user, tipo_user})
 })
 app.get('/listar_viagem',(req,res)=>{
     res.render('listar_viagem',{log, user, tipo_user})
