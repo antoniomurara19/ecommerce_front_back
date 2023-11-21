@@ -11,8 +11,9 @@
     <title>Home</title>
 </head>
 <body>
-    {{#if log}}
-    <header>
+    {{!-- ==================================== cliente ================================= --}}
+    {{#if cliente}}
+    <header id="header_cliente">
         <img src="/img/universe_icon.png" id="icon_universe" alt="ícone do universo">
         <nav>
             <a href="/">Home</a>
@@ -38,6 +39,39 @@
             </span></a>
         </nav>
     </header>
+
+    {{/if}}
+
+    {{!-- ==================================== gerenciador ============================= --}}
+
+    {{#if gerenciador}}
+    <header id="header_gerenciador">
+        <img src="/img/universe_icon.png" id="icon_universe" alt="ícone do universo">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/planetas">Viagens Planetárias</a>
+            <a href="/gerenciador">Gerenciador</a>
+            <a href="/logout">Logout</a>
+            <a>Usuário: {{user}}</a>
+            <a href="/carrinho"><span class="material-symbols-outlined carrinho">
+                shopping_cart
+            </span></a>
+        </nav>
+    </header>
+
+    {{else}}
+
+    {{!-- <header>
+        <img src="/img/universe_icon.png" id="icon_universe" alt="ícone do universo">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/register">Register</a>
+            <a href="/login">Login</a>
+            <a href="/carrinho"><span class="material-symbols-outlined carrinho">
+                shopping_cart
+            </span></a>
+        </nav>
+    </header> --}}
 
     {{/if}}
 

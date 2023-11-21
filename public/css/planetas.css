@@ -17,3 +17,10 @@
     width: 30vw;
     height: 50vh;
 }
+.img_pq{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30vw;
+    height: 37vh;
+}

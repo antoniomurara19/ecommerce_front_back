@@ -7,6 +7,7 @@ adicionar_carrinho.forEach((botao) => {
       const preco = Number(botao.getAttribute("data-preco"))
       const cod_prod = Number(botao.getAttribute("cod-prod"))
       const item = { cod_prod, nome, qtde, preco };
+      console.log(item)
 
       // Recupere o carrinho atual do Local Storage
       const carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
@@ -19,7 +20,7 @@ adicionar_carrinho.forEach((botao) => {
       localStorage.setItem("carrinho", JSON.stringify(carrinho))
 
       // Atualize o ícone do carrinho na página principal
-      const carrinho_icone = document.getElementById("carrinho-icon")
-      carrinho_icone.src = "../img/carrinho_cheio.png"
+      // const carrinho_icone = document.getElementById("carrinho-icon")
+      // carrinho_icone.src = "../img/carrinho_cheio.png"
     })
 })
