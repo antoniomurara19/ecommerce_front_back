@@ -1,0 +1,3 @@
+"id";"usuario";"email";"telefone";"cpf";"senha";"tipo"
+1;"antonio";"antonio@gmail.com";"992825576";"09495095905";"$2b$10$FODDTT3HiAspGzQIR7WNSeNBUs5BuLZ27dkq46N0qwtS1qDz9YkyC";"cliente"
+2;"jaime_palilo";"palilo@gmail.com";"992246183";"64694925920";"$2b$10$FODDTT3HiAspGzQIR7WNSeNBUs5BuLZ27dkq46N0qwtS1qDz9YkyC";"admin"

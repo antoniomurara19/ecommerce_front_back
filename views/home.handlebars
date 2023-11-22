@@ -1,10 +1,72 @@
-<header class="header">
+ {{#if log}}
+    <script src="/js/itens_carrinho.js" defer></script>
+    <link rel="stylesheet" href="/css/planetas.css">
+
+    <h1>Viagens Planetárias</h1>
+    <div class="container-1">
+        <div class="andromeda">
+            <p class="andromeda-text">Andrômeda</p>
+            <img src="/img/andromeda2.jpg" alt="Andromeda" class="img_pq">
+            <p class="preco">R$ <span class="valor-preco">20.000.000</span></p>
+            <p class="tempo">2,5 milhões de anos</p>
+            <button class="adicionar-ao-carrinho" data-nome="Andrômeda" data-preco="20000000" data-qtde="1" cod-prod="1">Adicionar ao Carrinho</button>
+        </div>
+        <div class="centauri">
+            <p class="centauri-text">Próxima Centauri-B</p>
+            <img src="/img/Próxima Centauri-B.jpg" alt="Próxima Centauri-B" class="img_pq">
+            <p class="preco">R$ <span class="valor-preco">10.000.000</span></p>
+            <p class="tempo">4,3 anos</p>
+            <button class="adicionar-ao-carrinho" data-nome="Próxima Centauri-B" data-preco="10000000" data-qtde="1" cod-prod="1">Adicionar ao Carrinho</button>
+        </div>
+        <div class="pilar">
+            <p class="pilar-text">Pilar da Criação</p>
+            <img src="/img/criacao.jpg" alt="Pilar da Criação" class="img_pq">
+            <p class="preco">R$ <span class="valor-preco">50.000.000</span></p>
+            <p class="tempo">6,5 mil anos</p>
+            <button class="adicionar-ao-carrinho" data-nome="Pilar da Criação" data-preco="50000000" data-qtde="1" cod-prod="1">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="marte">
+            <p class="marte-text">Marte</p>
+            <img src="/img/marte.png" alt="Marte" class="img_pq">
+            <p class="preco">R$ <span class="valor-preco">500.000</span></p>
+            <p class="tempo">3 min e 2 sec até 22min e 19 sec</p>
+            <button class="adicionar-ao-carrinho" data-nome="Marte" data-preco="500000" data-qtde="1" cod-prod="1">Adicionar ao Carrinho</button>
+        </div>
+        <div class="saturno">
+            <p class="saturno-text">Saturno</p>
+            <img src="/img/Saturno.jpg" alt="Marte" class="img_pq">
+            <p class="preco">R$ <span class="valor-preco">1.000.000</span></p>
+            <p class="tempo">1 hora e 23 min</p>
+            <button class="adicionar-ao-carrinho" data-nome="Saturno" data-preco="1000000" data-qtde="1" cod-prod="1">Adicionar ao Carrinho</button>
+        </div>
+        <div class="lua">
+            <p class="lua-text">Lua</p>
+            <img src="/img/Lua.jpg" alt="Lua" class="img_pq">
+            <p class="preco">R$ <span class="valor-preco">300.000</span></p>
+            <p class="tempo">1 sec e 300 mil</p>
+            <button class="adicionar-ao-carrinho" data-nome="Lua" data-preco="300000" data-qtde="1" cod-prod="1">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+{{else}}
+<link rel="stylesheet" href="/css/home.css">
+<header class="header" id="anchor">
     <div class="cont-header">
         <div class="cont-header-box">
             <h1>Viagens Universais</h1>
-            <div class="cont-header-box-text">
-                <p>No mesmo dia que você volta do trabalho, após 8 longas horas de serviço, você pode viajar 1.195 milhões de km e admirar os anéis de Saturno!!</p>
+            <div class="ja_tem_conta">
+                <h2>Já tem uma conta?</h2>
+                <br>
+                <button><a href="/login">Fazer Login</a></button>
             </div>
+            <br>
+            <div class="ja_tem_conta">
+                <h2>Ta sem continha?</h2>
+                <br>
+                <button><a href="/cadastro">Cadastre-se</a></button>
+            </div>
+        </div>
         </div>
     </div>
     <div class="cont-header-desconto">
@@ -22,7 +84,7 @@
             </div>
             <div class="marte-desconto-cont">
                 <h2 class="info-travel">Explore o planeta vermelho de Marte!</h2>
-                <button><a href="/marte.html">Procure!</a></button>
+                <a href="#anchor">Procure!</a>
             </div>
         </div>
     </div>
@@ -36,22 +98,9 @@
             </div>
             <div class="lua-desconto-cont">
                 <h2 class="info-travel">Vá para a enigmática Lua e veja o outro lado da lua!</h2>
-                <button><a href="/lua.html">Procure!</a></button>
+                <a href="#anchor">Procure!</a>
             </div>
         </div>    
     </div>
 </main>
-
-<footer>
-    <h2>Se inscreva <br> ganhe um desconto especial!</h2>
-    <p>Apesar dos pesares, ainda somos nós que teremos que descer das árvores, desbravar o mundo, lutar por comida, tentar dormir sem sono, olhar pro céu e sonhar com um mundo melhor..</p>
-    <div class="input">
-        <input type="email" placeholder="Digite seu melhor Email"><button type="submit">Inscreva-se</button>
-    </div>
-    <ul>
-        <li>19<h6>Pensamentos revolucionários sobre dogmas</h6></li>
-        <li>3<h6>Primeiro ser-humano a pisar em Saturno foi pela nossa empresa</h6></li>
-        <li>40<h6>Empresa conta com mais de 2147483648 viagens realizadas</h6></li>
-        <li>21<h6>Empresa com segurança, conforto e nostalgia pra você!!</h6></li>
-    </ul>
-</footer>
+{{/if}}
